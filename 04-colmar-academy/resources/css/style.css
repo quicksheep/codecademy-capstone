@@ -322,8 +322,6 @@ img {
 	padding-top: 0;
 }
 .aside .image {
-	width: 35%;
-	padding-top: 35%;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 }
@@ -545,6 +543,8 @@ footer nav a:hover {
 		background-position: center;
 		padding-top: 50%;
 		overflow: hidden;
+		width: 35%;
+		padding-top: 35%;
 	}
 	.aside .item img {
 		display: none;
