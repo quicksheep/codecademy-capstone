@@ -1,0 +1,642 @@
+/*********************************************
+	Theme Name: Colmar Academy - 
+	Description: Codecademy Capstone Project
+	Author: Daniel Lamb
+	Author URI: http://www.quicksheep.com/
+	Version: 2017.11.04
+*********************************************/
+
+/* Meyer reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}nav, section, aside { display: block; outline: none; }
+
+/* clearfix ------------ */
+
+.cf:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .cf {
+	zoom: 1;
+}
+/* IE6 */
+
+*:first-child+html .cf {
+	zoom: 1;
+}
+/* IE7 */
+
+/*********************************************
+	Core Structure */
+
+.accessible-skip {
+	display: none;
+}
+/* wrap outer */
+
+.layer {
+	text-align: center;
+	box-sizing: border-box;
+}
+/* wrap inner */
+
+.layer .inner {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	max-width: 1200px;
+}
+/* pad vertical */
+
+.pv {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+/* pad vertical */
+
+.ph {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+/*********************************************
+	Standard Type */
+
+body {
+	font-size: 16px;
+	line-height: 1.35;
+	color: #222;
+}
+h1 {
+	font-weight: 700;
+	font-family: 'Volkhov', serif;
+	color: black;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	font-family: 'Volkhov', serif;
+	line-height: 1.1;
+	color: black;
+	margin: 32px 0 16px;
+	margin: 2rem 0 1rem;
+}
+h2 {
+	font-size: 32px;
+	font-size: 2rem;
+}
+h3 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+p,
+li,
+cite,
+small,
+#wrapper a {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+blockquote {
+	font-size: 17.6px;
+	font-size: 1.1rem;
+}
+blockquote p {
+	margin-bottom: 16px;
+	line-height: 1.4;
+}
+blockquote cite {
+	font-style: italic;
+}
+.button {
+	display: block;
+	text-align: center;
+	padding: 8px;
+	background: black;
+	color: white;
+	text-decoration: none;
+	margin: 24px 0;
+	font-family: 'Volkhov', serif;
+	font-weight: 700;
+	widtH: 270px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+.button:hover {
+	background: white;
+	color: black;
+}
+.readMore {
+	color: #ea9b26;
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-block;
+	font-family: "source sans pro";
+	padding: 2px 0;
+	margin-top: 10px;
+}
+.readMore:hover {
+	color: black;
+	text-decoration: underline;
+}
+img {
+	max-width: 100%;
+}
+/*********************************************
+	major layer styles */
+
+.sixtyForty .main {
+	width: 60%;
+	float: left;
+}
+.sixtyForty .aside {
+	width: 40%;
+	float: right;
+}
+@media only screen and (max-width: 480px) {
+	.sixtyForty .main,
+	.sixtyForty .aside {
+		width: 100%;
+		float: none;
+	}
+}
+/*********************************************
+	Logo */
+
+#siteHeader {
+	height: 64px;
+	line-height: 64px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: white;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+#wrapper {
+	margin-top: 64px;
+}
+#siteHeader .inner {
+	padding-left: 24px;
+	padding-right: 24px;
+	box-sizing: border-box;
+}
+#siteLogo {
+	margin-top: 16px;
+	displaY: inline-block;
+	height: 32px;
+	padding-left: 32px;
+	background: url('../img/ic-logo.svg') top left no-repeat;
+	line-height: 32px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-size: 1.5rem;
+	float: left;
+}
+#siteLogo a {
+	color: inherit;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+#siteLogo a:hover {
+	opacity: 0.66;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=66)";
+}
+#colmar,
+#academy {
+	padding: 0;
+}
+#academy {
+	color: #f99500;
+	font-weight: 400;
+}
+/* videos ------------ */
+
+.videoWrap {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.videoWrap video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*********************************************
+	Navigation */
+
+#siteHeader nav {
+	display: inline-block;
+	float: right;
+	height: 64px;
+}
+#siteHeader nav li {
+	display: inline;
+}
+#siteHeader nav li a {
+	font-family: 'source sans pro';
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #333;
+	text-decoration: none;
+	margin: 0 8px;
+	line-height: 32px;
+}
+#siteHeader nav li a:hover {
+	color: black;
+	background-color: #FBB040;
+}
+/*********************************************
+	Hero */
+
+#hero {
+	background: #FBB040;
+}
+#hero .inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+}
+#hero .main {
+	width: 60%;
+	box-sizinG: border-box;
+}
+#hero .aside {
+	width: 40%;
+	-ms-flex-item-align: center;
+	align-self: center;
+	padding-right: 10%;
+}
+#hero h2 {
+	margin-top: 0;
+}
+#hero h2,
+#hero p {
+	max-width: 400px;
+}
+#hero h2 {
+	font-size: 36.8px;
+	font-size: 2.3rem;
+}
+#hero p {
+	font-size: 19.2px;
+	font-size: 1.2rem;
+}
+/*********************************************
+	Intro */
+
+.main,
+.aside {
+	box-sizing: border-box;
+}
+.main {
+	padding: 32px 24px;
+}
+.aside {
+	padding: 32px 0;
+}
+.aside .item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 16px 30px 16px 16px;
+}
+.aside .item:first-child {
+	padding-top: 0;
+}
+.aside .image {
+	width: 35%;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+.aside .text {
+	padding: 0 10% 0 12px;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+.aside .text h3,
+.aside .text h4 {
+	margin-top: 0;
+	margin-bottom: 4.8px;
+	margin-bottom: 0.3rem;
+	font-size: 19.2px;
+	font-size: 1.2rem;
+}
+/*
+.sixtyForty .aside {
+	border-left: 1px solid #eee;
+}
+.sixtyForty .aside .item {
+	 border-top: 1px solid #eee; 
+}
+*/
+
+.sixtyForty .aside .item:first-child {
+	border-top: none;
+}
+
+/*********************************************
+	Programs */
+
+#programs {
+	padding-right: 72px;
+	padding-left: 72px;
+	background: #ddd;
+}
+#programs h2 {
+	margin-top: 0;
+	text-align: center;
+}
+#programList {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.program {
+	-ms-flex-preferred-size: 300px;
+	flex-basis: 300px;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	display: block;
+	background: white;
+	margin: 16px;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.program span {
+	overflow: hidden;
+}
+.program img {
+	-webkit-transform: scale(1.125);
+	transform: scale(1.125);
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.program:hover {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.program a {
+	text-decoration: none;
+	color: inherit;
+}
+.program span {
+	display: block;
+	background: #ddd;
+}
+.program .text {
+	padding: 16px;
+}
+.program h3 {
+	margin: 0;
+	margin-bottom: 16px;
+	font-size: 22.4px;
+	font-size: 1.4rem;
+	line-height: 1.2;
+}
+.program h4 {
+	margin: 8px 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.courseList li {
+	display: inline;
+}
+.courseList li:after {
+	content: ", ";
+}
+.courseList li:last-child:after {
+	content: '';
+}
+
+/*********************************************
+	Programs */
+
+#thesis h2 {
+	text-align: center;
+}
+
+
+/*********************************************
+	Footer */
+
+footer {
+	font-size: 0.8rem;
+}
+footer .inner {
+	paddinG: 16px 24px;
+	box-sizing: border-box;
+}
+footer nav {
+	float: right;
+	displaY: inline-block;
+}
+footer nav a {
+	padding: 8px;
+	color: inherit;
+}
+footer nav a:hover {
+	text-decoration: underline;
+}
+
+/*********************************************
+	Media Queries */
+
+@media only screen and (max-width: 880px) {
+	.layer .main,
+	.layer .aside,
+	#hero .main,
+	#hero .aside {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 750px) {
+	#hero .inner {
+		display: block;
+	}
+	#hero .main,
+	#hero .aside {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	#hero .aside {
+		padding: 24px 16px;
+	}
+	#hero h2,
+	#hero p {
+		max-width: none;
+	}
+	#hero h2 {
+		font-size: 1.8rem;
+	}
+	#siteHeader nav li a .text {
+		displaY: none;
+	}
+	#siteHeader nav li a {
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		margin-top: 16px;
+	}
+	#siteHeader nav li a:hover {
+		background-color: transparent;
+		opacity: 0.66;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=66)";
+	}
+	#nav-campus a {
+		background-image: url('../img/ic-on-campus.svg');
+	}
+	#nav-online a {
+		background-image: url('../img/ic-online.svg');
+	}
+	#siteHeader nav #nav-companies {
+		displaY: none;
+	}
+	#nav-signin a {
+		background-image: url('../img/ic-login.svg');
+	}
+}
+@media only screen and (max-width: 640px) {
+	.layer .main,
+	.layer .aside {
+		width: 100%;
+	}
+	.aside {
+		padding: 16px 0;
+	}
+	.aside .item {
+		display: block;
+		padding: 0 16px 16px 16px;
+	}
+	.aside .item .image {
+		background-size: cover;
+		background-position: center;
+		padding-top: 50%;
+		overflow: hidden;
+		width: 35%;
+		padding-top: 35%;
+	}
+	.aside .item img {
+		display: none;
+	}
+	.aside .item .text {
+		padding: 16px 0 0 0;
+	}
+	.aside .item .image,
+	.aside .item .text {
+		width: 100%;
+	}
+	#orientation .image {
+		background-image: url('../img/information-orientation.jpg');
+	}
+	#campus .image {
+		background-image: url('../img/information-campus-mobile.jpg');
+	}
+	#lecture .image {
+		background-image: url('../img/information-guest-lecture-mobile.jpg');
+	}
+	#orientation .image {
+		background-image: url('../img/information-orientation.jpg');
+	}
+	#thesis .aside {
+		display: none;
+	}
+}
+@media only screen and (max-width: 500px) {
+	#academy,
+	#colmar {
+		display: none !important;
+	}
+	#siteHeader nav,
+	#siteHeader ul,
+	#siteHeader nav li,
+	#siteHeaderh1 {
+		display: inline;
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+	#siteHeader h1,
+	#siteHeader nav li a {
+		display: inline-block !important;
+		margin: 16px 0 0 0 !important;
+		paddinG: 0 !important;
+		box-sizing: border-box !important;
+		height: 32px;
+		line-height: 32px;
+		background-position: center !important;
+		float: none !important;
+		width: 23%;
+	}
+	#siteHeader h1:hover {
+		opacity: 0.66 !important;
+	}
+	#siteHeader .inner {
+		text-align: center;
+		padding: 0;
+	}
+}
+@media only screen and (max-width: 480px) {
+	#intro .main {
+		display: none;
+	}
+	#programs {
+		padding: 32px 16px;
+	}
+	#programs span,
+	.program h4,
+	.program .courseList {
+		display: none;
+	}
+	.program h3 {
+		margin: 0;
+		padding: 8px;
+	}
+	#programList {
+		displaY: block;
+	}
+	.program {
+		display: block;
+		margin: 0 0 8px 0;
+	}
+	.program:hover {
+		-webkit-transform: none;
+		transform: none;
+		box-shadow: inherit;
+		background-color: #FBB040;
+	}
+	footer nav {
+		display: none;
+	}
+}
